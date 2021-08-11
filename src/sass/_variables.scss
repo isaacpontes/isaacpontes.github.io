@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+// $family-sans-serif: "Ubuntu", sans-serif;
+
+$custom-primary: #77b6d8;
+$custom-secondary: #F9B175;
+$custom-link: #ff6842;
+$custom-dark: #232323;
+$custom-light: #f1f1f1;
+
+$custom-colors: (
+  "secondary": ($custom-secondary)
+);
+
+$primary: $custom-primary;
+$link: $custom-link;
+$dark: $custom-dark;
+$light: $custom-light;
+$white: #fff;
+$black: #000;
+
+$size-1: 3.5rem;     // 56px
+$size-2: 3rem;     // 48px
+$size-3: 2.25rem;  // 36px
+$size-4: 1.875rem; // 30px
+$size-5: 1.5rem;   // 24px
+$size-6: 1.125rem; // 18px
+$size-7: 0.875rem; // 14px
+
+$easing: ease;
+$radius: 2px;
+$speed: 300ms;
+
+$text: $black;
+$text-light: $black;
+$text-strong: $black;
+
+// $navbar-item-hover-color: $primary;
+$navbar-item-hover-background-color: transparent;
+$navbar-item-img-max-height: 3.25rem;
+$navbar-breakpoint: 769px;
+
+$body-size: 18px;
+
+$button-padding-vertical: 1.375em;
+$button-padding-horizontal: 1.375em;
+$button-border-width: 2px;
+
+$card-radius: $radius;
+
+$title-weight: 400;
+

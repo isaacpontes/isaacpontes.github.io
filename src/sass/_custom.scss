@@ -1,0 +1,120 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.is-max-tablet {
+  max-width: 768px !important;
+}
+
+.navbar-burger {
+  height: auto;
+}
+
+// .navbar-end {
+//   .menu-item:last-child() {
+//     @extend .navbar-item;
+
+//     a {
+//       @extend .button;
+//       @extend .is-link;
+//     }
+//   }
+// }
+
+.current-menu-item {
+  .navbar-item  {
+    color: $link;
+  }
+}
+
+$circle-width: 6px;
+$circle-spacing: 36px;
+
+.separator {
+  &, &:before, &:after {
+    display: block;
+    border-radius: 50%;
+    width: $circle-width;
+    height: $circle-width;
+  }
+
+  &:before, &:after {
+    position: absolute;
+    content: '';
+  }
+
+  &:before {
+    transform: translateX(-($circle-width + $circle-spacing));
+    background-color: $link;
+  }
+
+  & {
+    margin-left: $circle-width + $circle-spacing;
+    background-color: $link;
+  }
+
+  &:after {
+    transform: translateX($circle-width + $circle-spacing);
+    background-color: $link;
+  }
+}
+
+.button {
+  font-weight: 500;
+  // box-shadow: 0 1px 2px -1px rgba($color: #000000, $alpha: 0.1);
+  transition: .3s;
+
+  // &:hover {
+  //   box-shadow: 0 2px 8px -2px rgba($color: #000000, $alpha: 0.1);
+  // }
+}
+
+.is-underlined {
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 4px;
+
+  &:hover {
+    text-decoration-style: dotted !important;
+  }
+}
+
+.portfolio-project {
+  .card-content {
+    position: relative;
+  }
+
+  &__info {
+    background-color: #fff;
+    border-radius: $card-radius;
+    padding: 1.5rem;
+
+    display: grid;
+    place-content: center;
+
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+    transition: .3s;
+
+    &:hover {
+      opacity: 99%;
+    }
+  }
+}
+
+.badge {
+  border: 1px solid $light;
+  border-radius: $card-radius;
+
+  transition: .3s;
+
+  &:hover {
+    border-color: $primary;
+  }
+}
