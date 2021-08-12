@@ -89,17 +89,12 @@ $circle-spacing: 36px;
   }
 
   &__info {
-    background-color: #fff;
     border-radius: $card-radius;
     padding: 1.5rem;
 
-    display: grid;
-    place-content: center;
-
-    position: absolute;
+    position: relative;
     inset: 0;
 
-    opacity: 0;
     transition: .3s;
 
     &:hover {
@@ -117,4 +112,14 @@ $circle-spacing: 36px;
   &:hover {
     border-color: $primary;
   }
+}
+
+.feather {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
