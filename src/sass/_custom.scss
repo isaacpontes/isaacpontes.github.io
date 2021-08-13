@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+hr {
+  background: $dark;
+}
+
 .mx-auto {
   margin-left: auto !important;
   margin-right: auto !important;
@@ -14,17 +18,6 @@ html {
 .navbar-burger {
   height: auto;
 }
-
-// .navbar-end {
-//   .menu-item:last-child() {
-//     @extend .navbar-item;
-
-//     a {
-//       @extend .button;
-//       @extend .is-link;
-//     }
-//   }
-// }
 
 .current-menu-item {
   .navbar-item  {
