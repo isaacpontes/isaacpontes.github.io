@@ -1,9 +1,70 @@
+$circle-width: 6px;
+$circle-spacing: 36px;
+$default-transition: .15s;
+
+* {
+  transition: $default-transition;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 hr {
   background: $dark;
+}
+
+footer {
+  &.is-dark {
+    background-color: $black;
+    color: $white;
+  }
+
+  &.is-light {
+    background-color: $white;
+    color: $dark;
+  }
+}
+
+#themeSwitcher {
+  cursor: pointer;
+
+  &.is-dark {
+    .feather {
+      color: $white;
+    }
+
+    .feather-sun {
+      display: none;
+    }
+  }
+
+  &.is-light {
+    .feather {
+      color: $black;
+    }
+
+    .feather-moon {
+      display: none;
+    }
+  }
+}
+
+.is-primary {
+  color: $black !important;
+}
+
+.navbar .navbar-item {
+  &:hover {
+    background-color: transparent !important;
+    color: $link !important;
+  }
+}
+
+.logo {
+  background-color: $light;
+  border-radius: $radius;
+  padding: .25rem .5rem;
 }
 
 .mx-auto {
@@ -24,9 +85,6 @@ hr {
     color: $link;
   }
 }
-
-$circle-width: 6px;
-$circle-spacing: 36px;
 
 .separator {
   &, &:before, &:after {
@@ -59,8 +117,7 @@ $circle-spacing: 36px;
 
 .button {
   font-weight: 500;
-  // box-shadow: 0 1px 2px -1px rgba($color: #000000, $alpha: 0.1);
-  transition: .3s;
+  box-shadow: 0 1px 2px -1px rgba($color: #000000, $alpha: 0.1);
 
   // &:hover {
   //   box-shadow: 0 2px 8px -2px rgba($color: #000000, $alpha: 0.1);
@@ -84,11 +141,8 @@ $circle-spacing: 36px;
   &__info {
     border-radius: $card-radius;
     padding: 1.5rem;
-
     position: relative;
     inset: 0;
-
-    transition: .3s;
 
     &:hover {
       opacity: 99%;
@@ -96,14 +150,18 @@ $circle-spacing: 36px;
   }
 }
 
-.badge {
-  border: 1px solid $light;
+.card {
+  border: 1px solid;
   border-radius: $card-radius;
 
-  transition: .3s;
+  &.is-dark {
+    background-color: $dark;
+    border-color: $black;
+  }
 
-  &:hover {
-    border-color: $primary;
+  &.is-light {
+    background-color: $white;
+    border-color: $white;
   }
 }
 
@@ -115,4 +173,14 @@ $circle-spacing: 36px;
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
+
+  &.feather-sm {
+    height: 18px;
+    width: 18px;
+  }
+
+  &.feather-lg  {
+    height: 64px;
+    width: 64px;
+  }
 }

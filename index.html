@@ -24,15 +24,15 @@
   <!-- iPhone, iPod e Android 2.2+ -->
 
   <link rel="stylesheet" href="dist/main.css">
-  <script src="dist/main.js"></script>
+  <script src="dist/main.js" defer></script>
 </head>
 
 <body>
-  <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-          <img src="src/img/logo-reduced.svg" width="160" height="50" alt="Site Logo">
+          <img class="logo" src="src/img/logo-reduced.svg" width="160" height="50" alt="Site Logo">
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="headerBurgerMenu">
@@ -42,17 +42,22 @@
         </a>
       </div>
 
-      <div id="headerBurgerMenu" class="navbar-menu">
+      <div id="headerBurgerMenu" class="navbar-menu has-background-light">
         <div class="navbar-end">
-          <a href="/" class="navbar-item">
+          <a href="/" class="navbar-item has-text-black">
             Início
           </a>
-          <a href="/sobre.html" class="navbar-item">
+          <a href="#sobre" class="navbar-item has-text-black">
             Sobre Mim
           </a>
-          <a href="#contato" class="navbar-item">
+          <a href="#contato" class="navbar-item has-text-black">
             Fale Comigo
           </a>
+          <span id="themeSwitcher" class="navbar-item is-light">
+            Tema:&nbsp;
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
         </div>
       </div>
     </div> <!-- .container -->
@@ -60,25 +65,25 @@
 
   <main id="primary" class="site-main">
 
-    <section class="section">
+    <section class="section has-background-light">
       <div class="container">
         <div class="columns is-vcentered">
           <div class="column is-6">
             <img src="src/img/home/developer.svg" alt="Hero" width="675" height="450" class="is-block mx-auto" data-aos="fade-up" data-aos-delay="200">
           </div>
           <div class="column is-6">
-            <h2 class="title is-2" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="title is-2 has-text-black" data-aos="fade-up" data-aos-delay="400">
               Construindo Sites Para a Web Moderna
             </h2>
-            <p class="mb-5" data-aos="fade-up" data-aos-delay="600">
+            <p class="mb-5 has-text-black" data-aos="fade-up" data-aos-delay="600">
               Olá! Me chamo Isaac, sou um programador e webdesigner freelancer. Trabalho com criação de sites e
               aplicações web utilizando tecnologias como PHP e React.
             </p>
             <div class="buttons" data-aos="fade-up" data-aos-delay="800" data-aos-offset="200">
-              <a href="#sobre" class="button is-link">
+              <a href="#sobre" class="button is-primary">
                 Conheça Meu Trabalho
               </a>
-              <a href="#contato" class="button is-dark is-outlined">
+              <a href="#contato" class="button is-black is-outlined">
                 Solicite Um Orçamento
               </a>
             </div>
@@ -87,24 +92,24 @@
       </div>
     </section>
 
-    <section class="section" id="sobre">
-      <div class="container is-max-tablet">
+    <section class="section has-background-light" id="sobre">
+      <div class="container is-max-tablet has-text-centered">
         <div data-aos="fade-up">
-          <h3 class="title is-3-widescreen has-text-centered">
+          <h3 class="title is-3-widescreen  has-text-black">
             Sobre Mim
           </h3>
           <span class="separator mx-auto mb-6"></span>
         </div>
-        <p class="has-text-centered" data-aos="fade-up" data-aos-delay="500">
+        <p class=" has-text-black" data-aos="fade-up" data-aos-delay="500">
           Sou formado em Sistemas de Informação e atuo principalmente como desenvolvedor freelancer criando sites
           institucionais, blogs, lojas virtuais e aplicações web. Além disso, também trabalho com implantação,
           manutenção e atualização de sites e consultoria. E aí, vamos começar um projeto incrível juntos?
         </p>
       </div>
     </section>
-    <section class="section" id="meu-trabalho">
+    <section class="section has-background-light has-text-centered has-text-black" id="meu-trabalho">
       <div data-aos="fade-up">
-        <h3 class="title is-3 has-text-centered">
+        <h3 class="title is-3 has-text-centered has-text-black">
           Meu Trabalho
         </h3>
         <span class="separator mx-auto mb-6"></span>
@@ -115,7 +120,7 @@
             <figure class="image is-square">
               <img src="src/img/home/frontend.svg" alt="Front-end" width="256" height="256" class="is-block mx-auto">
             </figure>
-            <h4 class="title is-4 has-text-centered">
+            <h4 class="title is-4 has-text-black">
               Front-End e UI Design
             </h4>
             <p class="has-text-centered">
@@ -127,7 +132,7 @@
             <figure class="image is-square">
               <img src="src/img/home/backend.svg" alt="Back-end" width="256" height="256" class="is-block mx-auto">
             </figure>
-            <h4 class="title is-4 has-text-centered">
+            <h4 class="title is-4 has-text-black">
               Back-End e Infraestrutura
             </h4>
             <p class="has-text-centered">
@@ -139,7 +144,7 @@
             <figure class="image is-square">
               <img src="src/img/home/consulting.svg" alt="Consulting" width="256" height="256" class="is-block mx-auto">
             </figure>
-            <h4 class="title is-4 has-text-centered">
+            <h4 class="title is-4 has-text-black">
               Treinamento e Consultoria
             </h4>
             <p class="has-text-centered">
@@ -151,45 +156,45 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section has-background-light has-text-centered has-text-black">
       <div class="container" data-aos="fade-up">
-        <h3 class="title is-3 has-text-centered">
+        <h3 class="title is-3 has-text-black">
           Diferenciais
         </h3>
         <span class="separator mx-auto mb-6"></span>
       </div>
       <div class="container">
         <div class="columns">
-          <div class="column is-one-quarter py-6 has-text-centered" data-aos="fade-up" data-aos-delay="500">
-            <img src="src/font/feather/code.svg" class="mb-5" alt="GitHub" height="64" width="64">
-            <h4 class="title is-4">
+          <div class="column is-one-quarter py-6" data-aos="fade-up" data-aos-delay="500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lg feather-code has-text-black mb-5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            <h4 class="title is-4 has-text-black">
               Organização e Boas Práticas
             </h4>
             <p>
               Trabalho individualmente ou em equipe em projetos de todos os tamanhos escrevendo código limpo.
             </p>
           </div>
-          <div class="column is-one-quarter py-6 has-text-centered" data-aos="fade-up" data-aos-delay="900">
-            <img src="src/font/feather/pen-tool.svg" class="mb-5" alt="GitHub" height="64" width="64">
-            <h4 class="title is-4">
+          <div class="column is-one-quarter py-6" data-aos="fade-up" data-aos-delay="900">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lg feather-pen-tool has-text-black mb-5"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+            <h4 class="title is-4 has-text-black">
               Design Cuidadoso e Moderno
             </h4>
             <p>
               Construo interfaces responsivas e amigáveis, sempre com foco em gerar uma boa experiência de usuário.
             </p>
           </div>
-          <div class="column is-one-quarter py-6 has-text-centered" data-aos="fade-up" data-aos-delay="700">
-            <img src="src/font/feather/shield.svg" class="mb-5" alt="GitHub" height="64" width="64">
-            <h4 class="title is-4">
+          <div class="column is-one-quarter py-6" data-aos="fade-up" data-aos-delay="700">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lg feather-shield has-text-black mb-5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <h4 class="title is-4 has-text-black">
               Segurança e Confiabilidade
             </h4>
             <p>
               Utilizo tecnologias validadas por grandes empresas e sempre de forma estável, segura e atualizada.
             </p>
           </div>
-          <div class="column is-one-quarter py-6 has-text-centered" data-aos="fade-up" data-aos-delay="1100">
-            <img src="src/font/feather/trending-up.svg" class="mb-5" alt="GitHub" height="64" width="64">
-            <h4 class="title is-4">
+          <div class="column is-one-quarter py-6" data-aos="fade-up" data-aos-delay="1100">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lg feather-trending-up has-text-black mb-5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            <h4 class="title is-4 has-text-black">
               Sempre Atrás de Novos Desafios
             </h4>
             <p>
@@ -197,7 +202,7 @@
             </p>
           </div>
         </div>
-        <div class="button-group has-text-centered mb-6">
+        <div class="button-group mb-6">
           <a href="/contato" class="button is-link">
             Entre Em Contato
           </a>
@@ -205,27 +210,27 @@
       </div>
     </section>
 
-    <section class="section" id="portfolio">
+    <section class="section has-background-light has-text-black" id="portfolio">
       <div class="container" data-aos="fade-up">
-        <h3 class="title is-3 has-text-centered">
+        <h3 class="title is-3 has-text-centered has-text-black">
           Portfólio
         </h3>
         <span class="separator mx-auto mb-6"></span>
       </div>
 
-      <div class="columns">
-        <div class="column is-one-half" data-aos="fade-up" data-aos-delay="600">
-          <article class="badge portfolio-project">
+      <div class="columns is-multiline">
+        <div class="column is-one-third" data-aos="fade-up" data-aos-delay="600">
+          <article class="card is-light portfolio-project">
             <div class="card-image">
               <figure class="image is-16by9">
                 <img src="src/img/home/javascriptnotes.webp" alt="Javascript Notes screenshot">
               </figure>
             </div>
             <div class="portfolio-project__info">
-              <h4 class="title is-4">
+              <h4 class="title is-4 has-text-black">
                 Javascript Notes
               </h4>
-              <p class="mb-5">
+              <p class="mb-5 has-text-black">
                 Aplicação web de anotações inspirada no Evernote desenvolvida com Node, MongoDB e React. Projeto de
                 conclusão
                 do curso Programador Fullstack Javascript da OneBitCode.
@@ -244,10 +249,10 @@
                 <span class="tag is-secondary is-light">Vercel</span>
               </div>
               <div class="button-group">
-                <a href="https://javascriptnotes.vercel.app" class="button is-primary" target="_blank" rel="noopener">
+                <a href="https://javascriptnotes.vercel.app" class="button is-link" target="_blank" rel="noopener">
                   Visitar Site
                 </a>
-                <a href="https://github.com/isaacpontes/skynotes" class="button is-dark is-outlined" target="_blank"
+                <a href="https://github.com/isaacpontes/skynotes" class="button is-black is-outlined" target="_blank"
                   rel="noopener">
                   Código Fonte
                 </a>
@@ -255,18 +260,18 @@
             </div>
           </article>
         </div>
-        <div class="column is-one-half" data-aos="fade-up" data-aos-delay="800">
-          <article class="badge portfolio-project">
+        <div class="column is-one-third" data-aos="fade-up" data-aos-delay="800">
+          <article class="card is-light portfolio-project">
             <div class="card-image">
               <figure class="image is-16by9">
                 <img src="src/img/home/todo-list.webp" alt="TODO list screenshot">
               </figure>
             </div>
             <div class="portfolio-project__info">
-              <h4 class="title is-4">
+              <h4 class="title is-4 has-text-black">
                 TODO List
               </h4>
-              <p class="mb-5">
+              <p class="mb-5 has-text-black">
                 Aplicação web de listas de tarefas desenvolvida utilizando Node, Express, EJS e MongoDB. Projeto
                 desenvolvido durante o curso Programador Fullstack Javascript da OneBitCode.
               </p>
@@ -280,11 +285,11 @@
                 <span class="tag is-secondary is-light">Heroku</span>
               </div>
               <div class="button-group">
-                <a href="https://todo-list-node-onebitcode.herokuapp.com/" class="button is-primary" target="_blank"
+                <a href="https://todo-list-node-onebitcode.herokuapp.com/" class="button is-link" target="_blank"
                   rel="noopener">
                   Visitar Site
                 </a>
-                <a href="https://github.com/isaacpontes/todo-list-node" class="button is-dark is-outlined"
+                <a href="https://github.com/isaacpontes/todo-list-node" class="button is-black is-outlined"
                   target="_blank" rel="noopener">
                   Código Fonte
                 </a>
@@ -292,88 +297,78 @@
             </div>
           </article>
         </div>
-      </div>
-
-      <div class="container">
-        <div class="columns">
-          <div class="column is-one-half" data-aos="fade-up" data-aos-delay="500">
-            <article class="badge portfolio-project">
-              <div class="card-image">
-                <figure class="image is-16by9">
-                  <img src="src/img/home/sustentabio.webp" alt="Sustentabio screenshot">
-                </figure>
+        <div class="column is-one-third" data-aos="fade-up" data-aos-delay="500">
+          <article class="card is-light portfolio-project">
+            <div class="card-image">
+              <figure class="image is-16by9">
+                <img src="src/img/home/sustentabio.webp" alt="Sustentabio screenshot">
+              </figure>
+            </div>
+            <div class="portfolio-project__info">
+              <h4 class="title is-4 has-text-black">
+                Sustentabio
+              </h4>
+              <p class="mb-5 has-text-black">
+                Site institucional com blog para uma empresa de ecoturismo e treinamentos do segmento de meio
+                ambiente. Conta com tema customizado utilizando o WordPress CMS.
+              </p>
+              <div class="tags">
+                <span class="tag is-secondary is-light">WordPress</span>
+                <span class="tag is-secondary is-light">HTML</span>
+                <span class="tag is-secondary is-light">CSS</span>
+                <span class="tag is-secondary is-light">Javascript</span>
+                <span class="tag is-secondary is-light">Email Institucional</span>
+                <span class="tag is-secondary is-light">Hospedagem e Domínio</span>
               </div>
-              <div class="portfolio-project__info">
-                <h4 class="title is-4">
-                  Sustentabio
-                </h4>
-                <p class="mb-5">
-                  Site institucional com blog para uma empresa de ecoturismo e treinamentos do segmento de meio
-                  ambiente. Conta com tema customizado utilizando o WordPress CMS.
-                </p>
-                <div class="tags">
-                  <span class="tag is-secondary is-light">WordPress</span>
-                  <span class="tag is-secondary is-light">HTML</span>
-                  <span class="tag is-secondary is-light">CSS</span>
-                  <span class="tag is-secondary is-light">Javascript</span>
-                  <span class="tag is-secondary is-light">Email Institucional</span>
-                  <span class="tag is-secondary is-light">Hospedagem e Domínio</span>
-                </div>
-                <div class="button-group">
-                  <a href="https://sustenta.bio.br" class="button is-primary" target="_blank" rel="noopener">
-                    Visitar Site
-                  </a>
-                </div>
+              <div class="button-group">
+                <a href="https://sustenta.bio.br" class="button is-link" target="_blank" rel="noopener">
+                  Visitar Site
+                </a>
               </div>
-            </article>
-          </div>
-          <div class="column is-one-half" data-aos="fade-up">
-            <article class="badge portfolio-project">
-              <div class="card-image">
-                <figure class="image is-16by9">
-                  <img src="src/img/home/hawkinsdesign.webp" alt="Hawkins Design screenshot">
-                </figure>
-              </div>
-              <div class="portfolio-project__info">
-                <h4 class="title is-4">
-                  Hawkins Design
-                </h4>
-                <p class="mb-5">
-                  Site para uma agência de design gráfico com loja virtual e tema desenvolvido do zero utilizando o
-                  WordPress CMS. O projeto não é mais utilizado comercialmente.
-                </p>
-                <div class="tags">
-                  <span class="tag is-secondary is-light">PHP</span>
-                  <span class="tag is-secondary is-light">CSS</span>
-                  <span class="tag is-secondary is-light">Javascript</span>
-                  <span class="tag is-secondary is-light">WordPress</span>
-                  <span class="tag is-secondary is-light">Woocommerce</span>
-                  <span class="tag is-secondary is-light">MercadoPago</span>
-                  <span class="tag is-secondary is-light">Email Institucional</span>
-                  <span class="tag is-secondary is-light">Hospedagem e Domínio</span>
-                </div>
-                <!-- <div class="button-group">
-                  <a href="https://hawkinsdesign.com.br" class="button is-primary" target="_blank" rel="noopener">
-                    Visitar Site
-                  </a>
-                </div> -->
-              </div>
-            </article>
-          </div>
+            </div>
+          </article>
         </div>
-
-        <article class="message is-secondary my-6">
-          <div class="message-body">
-            Estou trabalhando em novos projetos e em breve eles também estarão aqui.
-            <!-- Você pode encontrar todos os meus projetos aqui. -->
-          </div>
-        </article>
+        <!-- <div class="column is-one-third" data-aos="fade-up">
+          <article class="card is-light portfolio-project">
+            <div class="card-image">
+              <figure class="image is-16by9">
+                <img src="src/img/home/hawkinsdesign.webp" alt="Hawkins Design screenshot">
+              </figure>
+            </div>
+            <div class="portfolio-project__info">
+              <h4 class="title is-4 has-text-black">
+                Hawkins Design
+              </h4>
+              <p class="mb-5 has-text-black">
+                Site para uma agência de design gráfico com loja virtual e tema desenvolvido do zero utilizando o
+                WordPress CMS. O projeto não é mais utilizado comercialmente.
+              </p>
+              <div class="tags">
+                <span class="tag is-secondary is-light">PHP</span>
+                <span class="tag is-secondary is-light">CSS</span>
+                <span class="tag is-secondary is-light">Javascript</span>
+                <span class="tag is-secondary is-light">WordPress</span>
+                <span class="tag is-secondary is-light">Woocommerce</span>
+                <span class="tag is-secondary is-light">MercadoPago</span>
+                <span class="tag is-secondary is-light">Email Institucional</span>
+                <span class="tag is-secondary is-light">Hospedagem e Domínio</span>
+              </div>
+            </div>
+          </article>
+        </div> -->
       </div>
+
+      <article class="message is-secondary my-6">
+        <div class="message-body">
+          Estou trabalhando em novos projetos e em breve eles também estarão aqui.
+          <!-- Você pode encontrar todos os meus projetos aqui. -->
+        </div>
+      </article>
     </section>
 
-    <section class="section" id="contato">
+    <section class="section has-background-light" id="contato">
       <div class="container" data-aos="fade-up">
-        <h3 class="title is-3 has-text-centered">
+        <h3 class="title is-3 has-text-centered has-text-black">
           Encontre-me
         </h3>
         <span class="separator mx-auto mb-6"></span>
@@ -383,13 +378,13 @@
         <div class="columns is-centered">
           <div class="column is-6-tablet is-5-desktop is-4-widescreen" data-aos="fade-up" data-aos-delay="500">
             <a href="https://github.com/isaacpontes" target="_blank" rel="noopener noreferrer">
-              <div class="badge">
+              <div class="card is-light">
                 <div class="card-content">
-                  <h4 class="title is-4">
-                    <img src="src/font/feather/github.svg" alt="GitHub" height="24" width="24">
+                  <h4 class="title is-4 has-text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github has-text-black"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                     GitHub
                   </h4>
-                  <p class="has-text-dark">
+                  <p class="has-text-black">
                     Confira de perto os meus projetos de código aberto, meus projetos de estudo e minhas contribuições.
                   </p>
                 </div>
@@ -398,13 +393,13 @@
           </div>
           <div class="column is-6-tablet is-5-desktop is-4-widescreen" data-aos="fade-up" data-aos-delay="600">
             <a href="https://linkedin.com/in/isaac-pontes" target="_blank" rel="noopener noreferrer">
-              <div class="badge">
+              <div class="card is-light">
                 <div class="card-content">
-                  <h4 class="title is-4">
-                    <img src="src/font/feather/linkedin.svg" alt="GitHub" height="24" width="24">
+                  <h4 class="title is-4 has-text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin has-text-black"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                     LinkedIn
                   </h4>
-                  <p class="has-text-dark">
+                  <p class="has-text-black">
                     Conecte-se e acompanhe minha carreira. Aqui é onde compartilho experiências e aprendizados.
                   </p>
                 </div>
@@ -415,13 +410,13 @@
         <div class="columns is-centered">
           <div class="column is-6-tablet is-5-desktop is-4-widescreen" data-aos="fade-up" data-aos-delay="700">
             <a href="https://instagram.com/isaac.lfp" target="_blank" rel="noopener noreferrer">
-              <div class="badge">
+              <div class="card is-light">
                 <div class="card-content">
-                  <h4 class="title is-4">
-                    <img src="src/font/feather/instagram.svg" alt="GitHub" height="24" width="24">
+                  <h4 class="title is-4 has-text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram has-text-black"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                     Instagram
                   </h4>
-                  <p class="has-text-dark">
+                  <p class="has-text-black">
                     Este é o meu espaço pessoal. Aqui é onde eu compartilho todo tipo de conteúdo. Segue lá.
                   </p>
                 </div>
@@ -430,13 +425,13 @@
           </div>
           <div class="column is-6-tablet is-5-desktop is-4-widescreen" data-aos="fade-up" data-aos-delay="800">
             <a href="https://wa.me/5522996057593" target="_blank" rel="noopener noreferrer">
-              <div class="badge">
+              <div class="card is-light">
                 <div class="card-content">
-                  <h4 class="title is-4">
-                    <img src="src/font/feather/phone.svg" alt="GitHub" height="24" width="24">
+                  <h4 class="title is-4 has-text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone has-text-black"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                     WhatsApp
                   </h4>
-                  <p class="has-text-dark">
+                  <p class="has-text-black">
                     Precisa de mim para um projeto? Estou aberto para trabalhos como freelancer. Envie-me uma
                     mensagem!
                   </p>
@@ -449,7 +444,7 @@
           ou
         </div>
         <div class="button-group has-text-centered">
-          <a href="mailto:contato@isaacpontes.dev.br" class="button is-primary">Envie-me Um Email</a>
+          <a href="mailto:contato@isaacpontes.dev.br" class="button is-link">Envie-me Um Email</a>
         </div>
       </div>
     </section>
@@ -464,22 +459,22 @@
     </div>
   </footer> -->
 
-  <div class="py-3 has-background-light has-text-centered">
+  <footer class="py-3 is-light has-text-centered">
     <p>
       Made with
       <span>
-        <img src="src/font/feather/heart.svg" alt="love" height="18" width="18">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sm feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
       </span>
       ,
       <span>
-        <img src="src/font/feather/coffee.svg" alt="love" height="18" width="18">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sm feather-coffee"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
       </span>
       and
-      <a href="https://bulma.io/" className="has-text-link" target="_blank" rel="noopener">
+      <a href="https://bulma.io/" target="_blank" rel="noopener">
         Bulma
       </a>
     </p>
-  </div>
+  </footer>
 
 </body>
 

@@ -1,3 +1,4 @@
+import '../sass/style.scss';
 import './aos';
 import './burger';
-import '../sass/style.scss';
+import './switch-theme';
