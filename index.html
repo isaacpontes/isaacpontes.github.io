@@ -1,104 +1,295 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Isaac Pontes - Fullstack Developer</title>
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&family=Mozilla+Text:wght@200..700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css">
+
+  <style>
+    body {
+      font-family: 'Mozilla Text', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Mozilla Headline', sans-serif;
+    }
+
+    #social-sidebar {
+      z-index: 1030;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .project-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
-  <header class="header initial-state">
-    <div>isaac_pontes</div>
-
-    <nav class="header__nav">
-      <button>Menu</button>
-      <ul>
-        <li class="nav-item">Início</li>
-        <li class="nav-item">Sobre</li>
-        <li class="nav-item">Portfólio</li>
-        <li class="nav-item">Contato</li>
-        <li class="nav-item">
-          <a href="/">pt-BR</a>
-          <a href="/en">en-US</a>
-        </li>
-      </ul>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">isaac_pontes</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Abrir navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#hello-section">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projetos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                🌐 Idioma
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                <li><a class="dropdown-item active" href="/">🇧🇷 Português (pt-BR)</a></li>
+                <li><a class="dropdown-item" href="/en">🇺🇸 English (en-US)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <aside id="social-sidebar">
-    <div>In</div>
-    <div>GH</div>
-    <div>ig</div>
-    <div>WP</div>
+  <!-- Social Sidebar -->
+  <aside id="social-sidebar"
+    class="position-fixed top-50 start-0 translate-middle-y p-2 bg-light border rounded shadow-sm">
+    <ul class="list-unstyled mb-0 text-center">
+      <li><a href="https://linkedin.com/in/isaacpontes" target="_blank" class="d-block mb-3 text-primary"><i class="bi bi-linkedin fs-4"></i></a></li>
+      <li><a href="https://github.com/isaacpontes" target="_blank" class="d-block mb-3 text-primary"><i class="bi bi-github fs-4"></i></a></li>
+      <li><a href="https://instagram.com/isaacpontes" target="_blank" class="d-block mb-3 text-primary"><i class="bi bi-instagram fs-4"></i></a></li>
+      <li><a href="https://wa.me/5522996057593" target="_blank" class="d-block text-primary"><i class="bi bi-whatsapp fs-4"></i></a></li>
+    </ul>
   </aside>
 
+  <!-- Main Content -->
   <main>
-    <section id="hello-section">
-      <h1>Olá!<br>Eu sou Isaac Pontes.</h1>
-      <p>
-        Desenvolvedor web Full-Stack especializado em JavaScript, TypeScript, Node.js e React.<br>
-        Construo soluções performáticas, escaláveis e com foco em SEO.
-      </p>
-    </section>
-
-    <section id="about" class="titled-section">
-      <h2 class="titled-section__title">Sobre Mim</h2>
-      <div class="titled-section__content">
-        <p>
-          Olá, sou o Isaac — um desenvolvedor web full-stack com mais de 9 anos de experiência ajudando empresas a
-          transformar ideias em produtos digitais de alta qualidade. Sou especialista em JavaScript, TypeScript, React,
-          Next.js e Node.js, entregando tudo, desde interfaces elegantes e responsivas até sistemas de back-end
-          escaláveis.
+    <!-- Hero Section -->
+    <section id="hello-section" class="bg-primary text-light text-center py-5">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Olá! Eu sou Isaac Pontes.</h1>
+        <p class="lead mt-3 mx-auto" style="max-width: 60rem;">
+          Sou um desenvolvedor full-stack especializado na criação de <strong>websites, aplicativos multiplataforma, APIs e integrações</strong>,
+          trabalhando principalmente com <strong>JavaScript, Node.js e React</strong>.
+          Construo soluções performáticas, escaláveis e responsivas.
         </p>
-        <p>
-          Trabalhei em projetos de todos os tamanhos, liderando equipes, orientando desenvolvedores e implantando
-          soluções na nuvem. Minha expertise abrange arquiteturas modernas, design de banco de dados, otimização de
-          desempenho, SEO, UI/UX e muito mais — sempre com foco em manutenibilidade, desempenho e resultados.
-        </p>
-        <p>
-          Se você precisa de um novo aplicativo web, um site rápido e moderno ou uma integração complexa, eu trago a
-          habilidade técnica e a mentalidade de resolução de problemas para fazer acontecer. Vamos construir algo
-          incrível juntos.
-        </p>
+        <a href="https://wa.me/5522996057593" class="btn btn-light btn-lg mt-3 me-3"><i class="bi bi-whatsapp me-2"></i> Me chame no WhatsApp</a>
+        <a href="#contact" class="btn btn-outline-light btn-lg mt-3"><i class="bi bi-envelope me-2"></i> Entre em contato</a>
       </div>
     </section>
 
-    <section id="skills" class="titled-section">
-      <h2 class="titled-section__title">Habilidades Técnicas</h2>
-      <div class="titled-section__content">
-        <ul>
-          <li><strong>Frontend:</strong> React, Next.js, Tailwind, HTML, CSS, JavaScript</li>
-          <li><strong>Backend:</strong> Node.js, TypeScript, Express, NestJS</li>
-          <li><strong>Database:</strong> PostgreSQL, MongoDB, Supabase</li>
-          <li><strong>DevOps:</strong> Docker, DigitalOcean, AWS</li>
-        </ul>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="fw-bold mb-5 text-center text-primary">Sobre mim</h2>
+        <div class="row">
+          <div class="col lg-4 text-center">
+            <img class="img-fluid rounded-5 shadow-sm" src="/assets/img/profile-image.jpg" alt="" width="270" height="268">
+          </div>
+          <div class="col-lg-8">
+            <p>
+              Olá, sou o Isaac — um desenvolvedor web full-stack com mais de 9 anos de experiência ajudando empresas a
+              transformar ideias em produtos digitais de alta qualidade. Sou especialista em <strong>JavaScript,
+              TypeScript, React, Next.js e Node.js</strong>, entregando tudo, desde interfaces elegantes e responsivas até
+              sistemas de back-end escaláveis.
+            </p>
+            <p>
+              Trabalhei em projetos de todos os tamanhos, liderando equipes, orientando desenvolvedores e implantando
+              soluções na nuvem. Minha expertise abrange arquiteturas modernas, design de banco de dados, otimização de
+              desempenho, SEO, UI/UX e muito mais.
+            </p>
+            <div class="mt-4">
+              <a href="#projects" class="btn btn-primary"><i class="bi bi-briefcase me-2"></i>Veja meus projetos</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="titled-section">
-      <h2 class="titled-section__title">Contato</h2>
-      <div class="titled-section__content">
-        <p>📍 São Fidélis, RJ - Brazil</p>
-        <p>📧 <a href="mailto:isaaclfp@outlook.com">isaaclfp@outlook.com</a></p>
-        <p>📱 <a href="https://wa.me/5522996057593" target="_blank">Fale comigo no WhatsApp</a></p>
+    <!-- Projects Section -->
+    <section id="projects" class="bg-light py-5">
+      <div class="container">
+        <h2 class="fw-bold mb-5 text-center text-primary">Alguns de meus projetos</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card shadow-sm">
+              <img src="/assets/img/project-sosf.png" alt="Projeto 1">
+              <div class="project-overlay">
+                <h5 class="fw-bold">Projeto 1</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card shadow-sm">
+              <img src="/assets/img/project-jazz.png" alt="Projeto 2">
+              <div class="project-overlay">
+                <h5 class="fw-bold">Projeto 2</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card shadow-sm">
+              <img src="/assets/img/project-notes.png" alt="Projeto 3">
+              <div class="project-overlay">
+                <h5 class="fw-bold">Projeto 3</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card shadow-sm">
+              <img src="/assets/img/project-estate.png" alt="App Imobiliário">
+              <div class="project-overlay">
+                <h5 class="fw-bold">App Imobiliário</h5>
+                <p>Plataforma moderna em Next.js com SEO otimizado para divulgação de imóveis.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card shadow-sm">
+              <img src="/assets/img/project-vivace.png" alt="Website para Hotel">
+              <div class="project-overlay">
+                <h5 class="fw-bold">Website para Hotel</h5>
+                <p>Design completo e desenvolvimento de website institucional para hotel.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card shadow-sm">
+              <img src="/assets/img/project-patients.png" alt="Gestão de Pacientes">
+              <div class="project-overlay">
+                <h5 class="fw-bold">Gestão de Pacientes</h5>
+                <p>Sistema fullstack para organização de consultas médicas em Node.js e MongoDB.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="#contact" class="btn btn-primary"><i class="bi bi-telephone me-2"></i>Solicite um orçamento</a>
+        </div>
       </div>
     </section>
 
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+      <div class="container">
+        <h2 class="fw-bold mb-5 text-center text-primary">Serviços que ofereço</h2>
+        <div class="row g-4 text-center">
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <i class="bi bi-laptop fs-1 text-primary mb-3"></i>
+                <h5 class="card-title fw-bold">Sites Modernos</h5>
+                <p class="card-text">Criação de sites rápidos, responsivos e otimizados para SEO.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <i class="bi bi-phone fs-1 text-primary mb-3"></i>
+                <h5 class="card-title fw-bold">Aplicativos Web & Mobile</h5>
+                <p class="card-text">Soluções personalizadas para web e dispositivos móveis.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <i class="bi bi-cloud-check fs-1 text-primary mb-3"></i>
+                <h5 class="card-title fw-bold">Integrações & Escalabilidade</h5>
+                <p class="card-text">Integração entre APIs e sistemas, automações e sistemas escaláveis.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <i class="bi bi-gear fs-1 text-primary mb-3"></i>
+                <h5 class="card-title fw-bold">Infraestrutura e Manutenção</h5>
+                <p class="card-text">Implantação e manutenção de aplicações, gestão de infraesturas em nuvem.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a href="#contact" class="btn btn-primary btn-lg"><i class="bi bi-calendar-check me-2"></i> Agende uma conversa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light py-5">
+      <div class="container">
+        <h2 class="fw-bold mb-5 text-center text-primary">Contato</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <img class="img-fluid rounded shadow-sm mb-4" src="https://picsum.photos/512/512?random=3" alt="" width="512" height="512">
+          </div>
+          <div class="col-md-6">
+            <p><i class="bi bi-geo-alt me-2"></i> São Fidélis, RJ - Brazil</p>
+            <p><i class="bi bi-envelope me-2"></i><a href="mailto:isaaclfp@outlook.com">isaaclfp@outlook.com</a></p>
+            <p><i class="bi bi-whatsapp me-2"></i><a href="https://wa.me/5522996057593" target="_blank">Fale comigo no WhatsApp</a></p>
+            <a href="cv.pdf" class="btn btn-outline-primary mt-3"><i class="bi bi-file-earmark-person me-2"></i>Baixar meu currículo</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>Feito com ❤️ por mim 🙂</p>
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-3">
+    <div class="container text-center">
+      <p class="mb-0">Feito com ❤️ por mim 🙂</p>
+    </div>
   </footer>
 
-  <script src="/assets/script.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
